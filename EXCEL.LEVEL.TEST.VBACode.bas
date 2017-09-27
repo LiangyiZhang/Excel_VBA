@@ -21,7 +21,7 @@ Function DelayEx(ms As Long)
         DoEvents
     Loop
     StopTest
-    MsgBox "¿¼ÊÔ½áÊø£¡"
+    MsgBox "è€ƒè¯•ç»“æŸï¼"
 End Function
 
 Sub StartTest()
@@ -38,7 +38,7 @@ End Sub
 
 Sub CuoTi()
     If Not Worksheets("SELABAS").Range("B13").Value Then
-    MsgBox "ÇëÏÈ½øĞĞ²âÊÔ£¡"
+    MsgBox "è¯·å…ˆè¿›è¡Œæµ‹è¯•ï¼"
     Exit Sub
     End If
     ZhanKai
@@ -46,7 +46,7 @@ End Sub
 
 Sub ZheDie()
     Dim hid As Range
-    Worksheets("ExcelË®Æ½²âÊÔ").Unprotect "10471048"
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Unprotect "********"
     For i = 17 To 210
     If Not hid Is Nothing Then
     Set hid = Union(hid, Rows(i))
@@ -55,12 +55,12 @@ Sub ZheDie()
     End If
     Next
     hid.EntireRow.Hidden = True
-    Worksheets("ExcelË®Æ½²âÊÔ").Protect "10471048"
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Protect "********"
     Worksheets("SELABAS").Range("B13").Value = True
 End Sub
 
 Sub ZhanKai()
-    Worksheets("ExcelË®Æ½²âÊÔ").Unprotect "10471048"
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Unprotect "********"
     Dim hid As Range
     For i = 17 To 210
     If Not hid Is Nothing Then
@@ -70,13 +70,13 @@ Sub ZhanKai()
     End If
     Next
     hid.EntireRow.Hidden = False
-    Worksheets("ExcelË®Æ½²âÊÔ").Protect "10471048"
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Protect "********"
 End Sub
 
 Sub ChongZhi()
-    Worksheets("ExcelË®Æ½²âÊÔ").Unprotect "10471048"
-    Worksheets("ExcelË®Æ½²âÊÔ").Range("H18, H23, H28, H33, H38, H43, H48, H53, H58, H63, H68, H73, H78, H90, H95, F116, F131, D141,D142,D143, F151, F174, D176, F176, H176, D207, E189").Value = ""
-    Worksheets("ExcelË®Æ½²âÊÔ").Protect "10471048"
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Unprotect "********"
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Range("H18, H23, H28, H33, H38, H43, H48, H53, H58, H63, H68, H73, H78, H90, H95, F116, F131, D141,D142,D143, F151, F174, D176, F176, H176, D207, E189").Value = ""
+    Worksheets("Excelæ°´å¹³æµ‹è¯•").Protect "********"
     ZheDie
     Worksheets("SELABAS").Range("B13").Value = False
 End Sub
